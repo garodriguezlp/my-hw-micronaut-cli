@@ -35,7 +35,7 @@ jobs:
           prerelease: false
           
       - name: Set the value
-        id: set version var
+        id: set_project_version
         run: |
           echo "verion=$(./gradlew properties 2>/dev/null | grep version | sed 's/version: //g')" >> $GITHUB_ENV      
       
