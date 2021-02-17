@@ -34,7 +34,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Set the value
+      - name: Extract project version
         id: set_project_version
         run: |
           echo "version=$(./gradlew properties 2>/dev/null | grep version | sed 's/version: //g')" >> $GITHUB_ENV
